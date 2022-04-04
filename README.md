@@ -1,3 +1,19 @@
+## Task
+
+Each member (including the team leader) should create a branch (use student number as the branch name) and
+include a small program in the branch that demonstrate the (TDD) test fixture for the following:
+    
+    i. Object Equality
+    ii. Object Identity
+    iii. Failing Test
+    iv. Timeouts
+    v. Disabling Test.
+
+- After the above-mentioned program code is completed on your branch, merge from your branch into the master,
+and send a pull request from your master to the team leader.
+
+- Thereafter the team leader will add the member’s contributions to the master branch.Each member should/must get the updated version of the project before submission.
+
 ## Authors
 
 ### Owner
