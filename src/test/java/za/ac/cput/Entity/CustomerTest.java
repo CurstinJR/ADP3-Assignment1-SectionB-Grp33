@@ -66,4 +66,19 @@ class CustomerTest
             System.out.println(customer);
         }
     }
+
+    @Test
+    public void boundToFail_fail()
+    {
+        customerB = customerA;
+
+        if (customerA.equals(customerB))
+        {
+            fail("customer A should not equal to Customer B");
+        }
+        else
+        {
+            System.out.println("Customer A does not equal to Customer B");
+        }
+    }
 }
