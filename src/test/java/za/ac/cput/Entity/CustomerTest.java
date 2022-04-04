@@ -1,8 +1,11 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -80,5 +83,13 @@ class CustomerTest
         {
             System.out.println("Customer A does not equal to Customer B");
         }
+    }
+
+    @Test
+    @Disabled("Test not ready")
+    public void disabledTest_ignored()
+    {
+        List<Customer> numbers = List.of(customerA, customerB);
+        numbers.forEach(System.out::println);
     }
 }
