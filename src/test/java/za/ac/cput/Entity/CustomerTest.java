@@ -37,4 +37,17 @@ class CustomerTest
     {
         assertNotSame(customerA, customerB);
     }
+
+    @Test
+    public void objectEqualityTest_shouldEqualObjects()
+    {
+        customerB = customerA;
+        assertEquals(customerA, customerB);
+    }
+
+    @Test
+    public void objectEqualityTest_shouldNotEqualObjects()
+    {
+        assertNotEquals(customerA, customerB);
+    }
 }
