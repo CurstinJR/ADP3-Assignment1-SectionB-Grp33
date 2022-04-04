@@ -2,6 +2,7 @@ package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -49,5 +50,20 @@ class CustomerTest
     public void objectEqualityTest_shouldNotEqualObjects()
     {
         assertNotEquals(customerA, customerB);
+    }
+
+    @Test
+    @Timeout(1)
+    public void timeoutTest_pass()
+    {
+        Customer [] arr = new Customer[2];
+
+        arr[0] = customerA;
+        arr[1] = customerA;
+
+        for (Customer customer : arr)
+        {
+            System.out.println(customer);
+        }
     }
 }
