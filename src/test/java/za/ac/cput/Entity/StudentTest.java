@@ -44,7 +44,7 @@ class StudentTest {
         String stud1 = student1.getStudentName();
         String stud2 = student2.getStudentName();
         assertEquals(stud1, stud2);
-        fail("Forcing the test to fail");
+        fail("I am forcing the test to fail on purpose");
     }
 
     //Timeout test
