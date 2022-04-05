@@ -27,5 +27,12 @@ class StudentTest {
         assertNotEquals(student2, student4);
     }
 
+    //Test for object identity.
+    @Test
+    void testIdentity() {
+        assertSame(student1, student3);
+        assertNotSame(student1, student2);
+    }
+
 
 }
