@@ -34,5 +34,14 @@ class StudentTest {
         assertNotSame(student1, student2);
     }
 
+    //Failing test
+    @Test
+    void failingTest() {
+        String stud1 = student1.getStudentName();
+        String stud2 = student4.getStudentName();
+        assertEquals(stud1, stud2);
+        fail("Forcing the test to fail");
+    }
+
 
 }
