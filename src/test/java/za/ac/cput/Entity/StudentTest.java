@@ -1,6 +1,7 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -19,5 +20,12 @@ class StudentTest {
         student4 = new Student("Lito","Koopman",18);
 
     }
+    //Test for object equality.
+    @Test
+    void testEquality() {
+        assertEquals(student1, student3);
+        assertNotEquals(student2, student4);
+    }
+
 
 }
