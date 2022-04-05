@@ -2,6 +2,9 @@ package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,6 +45,16 @@ class StudentTest {
         assertEquals(stud1, stud2);
         fail("Forcing the test to fail");
     }
+
+    //Timeout test
+    @Test
+    @Timeout(value = 1, unit = TimeUnit.MILLISECONDS)
+    void timeoutTest() {
+        String stud3 = student1.getStudentName();
+        String stud4 = student4.getStudentName();
+        assertEquals(stud3, stud4);
+    }
+
 
 
 }
