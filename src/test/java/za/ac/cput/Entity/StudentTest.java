@@ -1,6 +1,7 @@
 package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
@@ -20,7 +21,7 @@ class StudentTest {
         student1 = new Student("lyle","Adams",17);
         student2 = new Student("Armin","Appolish",15);
         student3 = student1;
-        student4 = new Student("Lito","Koopman",18);
+        student4 = new Student("Armin","Koopman",18);
 
     }
     //Test for object equality.
@@ -41,20 +42,25 @@ class StudentTest {
     @Test
     void failingTest() {
         String stud1 = student1.getStudentName();
-        String stud2 = student4.getStudentName();
+        String stud2 = student2.getStudentName();
         assertEquals(stud1, stud2);
         fail("Forcing the test to fail");
     }
 
     //Timeout test
     @Test
-    @Timeout(value = 1, unit = TimeUnit.MILLISECONDS)
+    @Timeout(value = 1000, unit = TimeUnit.MILLISECONDS)
     void timeoutTest() {
-        String stud3 = student1.getStudentName();
+        String stud3 = student2.getStudentName();
         String stud4 = student4.getStudentName();
         assertEquals(stud3, stud4);
     }
 
-
+    //Disabling test
+    @Disabled("Disabling the test method")
+    @Test
+    void disablingTest() {
+        assertEquals(student1, student2);
+    }
 
 }
