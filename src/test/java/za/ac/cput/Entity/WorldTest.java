@@ -6,18 +6,21 @@ package za.ac.cput.Entity;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class WorldTest {
     @Test
     public void testFailing() {
-        fail("Hello Everyone ");
+        fail("Hello Everyone,this method will fail ");
     }
     @Test
     public void testEquality(){
-        String Str1 = "Russia";
-        String Str2 = "Russia";
+        String Str1 = new String ("Russia");
+        String Str2 = new String ("Russia");
         assertEquals(Str1, Str2);
     }
     @Test
@@ -26,8 +29,8 @@ class WorldTest {
         String obj4 = "England";
         assertSame(obj3, obj4);
     }
+    @Disabled("I am disabled this method ")
     @Test
-    @Disabled("I am from Gabon ")
     public void disabledTest(){
         int a = 145;
         int b = 200;
@@ -36,5 +39,13 @@ class WorldTest {
 
     }
 
+    @Test
+    @Timeout(value = 500, unit = TimeUnit.MILLISECONDS)
+    void timeoutTest() {
+        double kilometerWestSide = 152.02;
+        double c = 200.50;
+        double sum = kilometerWestSide * c;
+        System.out.println("ANSWER: "+sum);
+    }
 
 }
